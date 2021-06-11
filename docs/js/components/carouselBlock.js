@@ -111,7 +111,7 @@ export default class CarouselBlock extends HTMLElement {
                 <div class="carousel-inner">
                     ${this.panels.map((p, i) => `
                          <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                            ${p.img ? `<img src="${p.img}"/>` : '<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>'}
+                            ${p.img ? `<img src="${p.img}" alt="Placeholder image"/>` : '<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>'}
                             <div class="container">
                                 <div class="carousel-caption text-start">
                                     <h1>${p.title}</h1>
