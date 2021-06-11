@@ -27,7 +27,7 @@ export default class FeaturetteLinks extends HTMLElement {
 
             ${this.featurettes.map((f, i) => `
              <hr class="featurette-divider">
-            <a href="#">
+            <a href="${f.href}">
                 <div class="row featurette">
                     <div class="col-md-7 ${i % 2 !== 0 ? 'order-md-2' : ''}">
                         <h2 class="featurette-heading">${f.title}</h2>

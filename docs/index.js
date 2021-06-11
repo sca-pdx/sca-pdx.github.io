@@ -41,10 +41,9 @@ let featuredLinks = new FeaturedLinks([
 ]);
 
 let featuretteLinks = new FeaturetteLinks(
-
-
     [
         ALL_ARTICLES['historyOfSCAInPortland'].getLink(),
+        ALL_ARTICLES['firstPractice'].getLink(),
     {
         title: 'First featurette heading. <span class="text-muted">It’ll blow your mind.</span>',
         subtitle: 'Some great placeholder content for the first featurette here. Imagine some exciting prose here.'
