@@ -13,9 +13,9 @@ if (params.get('id')) {
 } else {
     document.querySelector('main').innerHTML = `
         <div class="container marketing">
-            <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+     <!--       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
                 <input type="text" class="form-control" id="inputTextSearch" placeholder="Filter albums">
-            </div>
+            </div>-->
             <div id="articleList">
     
     

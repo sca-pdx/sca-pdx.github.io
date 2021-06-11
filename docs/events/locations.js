@@ -34,7 +34,7 @@ export const MULTNOMAH_ARTS_CENTER = new Location({
     title: 'Multnomah Arts Center',
     address: new Address({
         line1: '7688 SW Capitol Hwy',
-        city: 'Portland'
+        city: 'Portland',
         state: 'OR',
         postal: '97219',
         lat: 45.468222,

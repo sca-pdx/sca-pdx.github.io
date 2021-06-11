@@ -24,19 +24,19 @@ let featuredLinks = new FeaturedLinks([
         title: 'Three Mountains',
         img: '/img/three-mtns.gif',
         subtitle: 'Portland, Oregon and encompassing all of Multnomah and Clackamas counties.',
-        callToAction: '<a class="btn btn-lg btn-primary" href="http://baronyofthreemountains.org/" target="_blank">Learn More!</a>'
+        callToAction: '<a class="btn btn-lg btn-primary" href="/articles/index.html?id=threeMountains" target="_blank">Learn More!</a>'
     },
     {
         title: 'Dragon\'s Mist',
         img: '/img/DragonsMistBranchof.gif',
         subtitle: 'Washington and Clatsop counties in Oregon.',
-        callToAction: '<a class="btn btn-lg btn-primary" href="https://dragonsmist.antir.sca.org/" target="_blank">Learn More!</a>'
+        callToAction: '<a class="btn btn-lg btn-primary" href="/articles/index.html?id=dragonsMist" target="_blank">Learn More!</a>'
     },
     {
         title: 'Stromgard',
         img: '/img/StromgardBranchof.gif',
         subtitle: 'Southwest Washington including Clark and Skamania counties',
-        callToAction: '<a class="btn btn-lg btn-primary" href="https://www.stromgard.org/" target="_blank">Learn More!</a>'
+        callToAction: '<a class="btn btn-lg btn-primary" href="/articles/index.html?id=stromgard" target="_blank">Learn More!</a>'
     }
 ]);
 
@@ -58,6 +58,22 @@ let featuretteLinks = new FeaturetteLinks(
     }
 ]);
 
+let splash = document.createElement('div');
+splash.style.paddingBottom = '20px';
+splash.innerHTML = `
+    <h1 style="text-align: center">Welcome to the Current Middle Ages</h1>
+    
+    <p>The Society for Creative Anachronism is a World-Wide organization of people with a shared love of history, in particular, the middle ages.</p>
+    
+    <p>Here in the Portland metro area, we have three branches spreading across the area to ensure that no matter where in the area you are, you can join in the medieval fun.
+        Our local chapters, called baronies, hold weekly and monthly activities that range from practicing medieval combat, to creating incredible works of art. Throughout the year, these baronies
+        will also hold large events where tournaments, feasts, classes, and more are held. If you are unsure of where to being, feel free to reach out to
+        info@scapdx.com and we will help you get connected to your local groups upcoming events and activities.
+    </p>
+
+`;
+
 document.querySelector('main').prepend(carousel);
 document.querySelector('main div.marketing').prepend(featuredLinks);
+document.querySelector('main div.marketing').prepend(splash);
 document.querySelector('main div.marketing').append(featuretteLinks);

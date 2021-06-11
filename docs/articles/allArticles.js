@@ -12,7 +12,25 @@ const articles = [
         title: 'Attending your first practice',
         subtitle: 'What to bring and what to expect',
         contentPath: '/articles/content/firstPractice.md'
-    })
+    }),
+    new Article({
+        id: 'threeMountains',
+        title: 'The Barony of Three Mountains',
+        subtitle: 'Welcome to Portland',
+        contentPath: '/articles/content/threeMountains.md'
+    }),
+    new Article({
+        id: 'dragonsMist',
+        title: 'The Barony of Dragon\'s Mist',
+        subtitle: 'Portland to the Sea',
+        contentPath: '/articles/content/dragonsMist.md'
+    }),
+    new Article({
+        id: 'stromgard',
+        title: 'The Barony of Stromgard',
+        subtitle: 'Southwest Washington',
+        contentPath: '/articles/content/stromgard.md'
+    }),
 ];
 
 export const ALL_ARTICLES = articles.reduce((acc, a) => {

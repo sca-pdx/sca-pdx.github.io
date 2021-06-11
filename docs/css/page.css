@@ -17,3 +17,7 @@ body {
         font-size: 3.5rem;
     }
 }
+
+main {
+    margin-top: 7px;
+}
