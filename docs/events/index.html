@@ -17,6 +17,16 @@
 
     <script type="module" src="./events.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css" rel="stylesheet" />
+    <!-- rrule lib -->
+    <script src='https://cdn.jsdelivr.net/npm/rrule@2.6.4/dist/es5/rrule.min.js'></script>
+
+    <!-- fullcalendar bundle -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+
+    <!-- the rrule-to-fullcalendar connector. must go AFTER the rrule lib -->
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@5.5.0/main.global.min.js'></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X77F6PSZNY"></script>
     <script>
@@ -26,21 +36,87 @@
 
         gtag('config', 'G-X77F6PSZNY');
     </script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            let initialView = new URLSearchParams(window.location.search);
+
+            fetch('../pages.json').then(resp => resp.json()).then(json => {
+                let startOfMonth = new Date();
+                startOfMonth.setDate(0);
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    customButtons: {
+                        toggleViewTypeButton: {
+                            text: 'Toggle View',
+                            click: function() {
+                                console.log(calendar.view.type);
+                                if (calendar.view.type === 'dayGridMonth') {
+                                    calendar.changeView('listWeek')
+                                } else {
+                                    calendar.changeView('dayGridMonth')
+                                }
+                            }
+                        }
+                    },
+                    headerToolbar: {
+                        left: 'title',
+                        center: '',
+                        right: 'prev,next today toggleViewTypeButton'
+                    },
+                    validRange: {
+                        start: startOfMonth.toISOString().split('T')[0],
+                    },
+                    eventClick: (e) => {
+                        console.log(e);
+                        console.log(e.event.id);
+                        window.location = e.event.id;
+                    }
+                });
+                calendar.render();
+
+                for (let index in json.event) {
+                    calendar.addEvent(json.event[index]);
+                    console.log(json.event[index]);
+                }
+            });
+        });
+
+    </script>
+
+    <style>
+
+        .fc-event:hover {
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
 
 <nav-header></nav-header>
 
 <main>
-    <div class="container marketing">
+    <div class="container-fluid marketing">
         <div class="row">
-
-            <div class="col-md-4" id="activitiesFilter">
+            <div class="col-sm-12 col-md-4" id="branchFilters">
 
             </div>
+            <div class="col-sm-12 col-md-4" id="activityFilters">
 
+            </div>
+            <div class="col-sm-12 col-md-4" id="tagsFilters">
+
+            </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12" id="calendar">
+
+
+            </div>
+        </div>
     </div>
     <nav-footer></nav-footer>
 </main>

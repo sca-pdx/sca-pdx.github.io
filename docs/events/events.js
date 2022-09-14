@@ -1,52 +1,54 @@
 import NavHeader from "../js/components/navHeader.js";
-import {ACTIVITY_TYPES} from "./allActivities.js";
 
-document.querySelector('#activitiesFilter').innerHTML = `
-            Branches
-            <div class="branchesFilter">
-                <ul>
+fetch('../pages.json').then(resp => resp.json()).then(json => {
+    let events = json.event;
+    let branches = events.map(e => e.branch).filter(b => !!b).reduce((acc, elm) => {
+        if (acc.indexOf(elm) === -1) {
+            acc.push(elm);
+        }
+        return acc;
+    }, []).sort();
+
+    let activityTypes = events.map(e => e.type).filter(b => !!b).reduce((acc, elm) => {
+        if (acc.indexOf(elm) === -1) {
+            acc.push(elm);
+        }
+        return acc;
+    }, []).sort();
+
+    document.querySelector('#branchFilters').innerHTML = `
+        Branches
+        <div class="branchFilters">
+            <ul>
+                ${branches.map(b => `
                     <li class="form-check">
                         <input class="form-check-input" checked="true" type="checkbox" value="" id="branchAll">
                         <label class="form-check-label" for="branchAll">
-                            All Branches
+                            ${b}
                         </label>
                     </li>
-                    <li class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" data-filter="branch" data-filter-value="dragonsMist" id="dragonMist">
-                        <label class="form-check-label" for="dragonMist">
-                            Dragon's Mist
-                        </label>
-                    </li>
-                    <li class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" data-filter="branch" data-filter-value="Stromgard" id="stromgard">
-                        <label class="form-check-label" for="stromgard">
-                            Stromgard
-                        </label>
-                    </li>
-                    <li class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" data-filter="branch" data-filter-value="threeMountains" id="threeMountains">
-                        <label class="form-check-label" for="threeMountains">
-                            Three Mountains
-                        </label>
-                    </li>
-                </ul>
+                `).join('')}
+           </ul>
+       </div>
+    `;
 
-                Activity Type
-                <div class="branchesFilter">
-                    <ul>
-                        <li class="form-check">
-                            <input class="form-check-input" checked="true" type="checkbox" value="" id="typeDefault">
-                            <label class="form-check-label" for="typeDefault">
-                                All
-                            </label>
-                        </li>   
-                        ${ACTIVITY_TYPES.map(type => `
-                            <li class="form-check">
-                                <input class="form-check-input" type="checkbox" data-filter="type" data-filter-value="${type.id}" id="${type.id}">
-                                <label class="form-check-label" for="${type.id}">
-                                    ${type.name}
-                                </label>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>`;
+    document.querySelector('#activityFilters').innerHTML = `
+        Branches
+        <div class="activityFilters">
+            <ul>
+                ${activityTypes.map(a => `
+                    <li class="form-check">
+                        <input class="form-check-input" checked="true" type="checkbox" value="" id="branchAll">
+                        <label class="form-check-label" for="branchAll">
+                            ${a}
+                        </label>
+                    </li>
+                `).join('')}
+           </ul>
+       </div>
+    `;
+
+
+
+})
+

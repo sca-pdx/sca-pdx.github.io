@@ -1,0 +1,143 @@
+{
+    "article": [
+        {
+            "title": "Barony of Dragon's Mist",
+            "subtitle": "Washington and Clatsop Counties of Oregon",
+            "image": "",
+            "pageType": "article",
+            "id": "/articles/content/dragonsMist.html",
+            "html": "/articles/content/dragonsMist.html"
+        },
+        {
+            "title": "First Time At Practice",
+            "subtitle": "What to bring and what to expect",
+            "image": "",
+            "pageType": "article",
+            "id": "/articles/content/firstPractice.html",
+            "html": "/articles/content/firstPractice.html"
+        },
+        {
+            "title": "Barony of Stromgard",
+            "subtitle": "Vancouver Washington",
+            "image": "/img/StromgardBranchof.gif",
+            "pageType": "article",
+            "id": "/articles/content/stromgard.html",
+            "html": "/articles/content/stromgard.html"
+        },
+        {
+            "title": "Barony of Three Mountains",
+            "subtitle": "Multnomah & Clackamas Counties",
+            "image": "",
+            "pageType": "article",
+            "id": "/articles/content/threeMountains.html",
+            "html": "/articles/content/threeMountains.html"
+        }
+    ],
+    "event": [
+        {
+            "title": "Three Mountains Weekly Practice",
+            "daysOfWeek": [
+                "1"
+            ],
+            "startTime": "19:00:00",
+            "endTime": "21:00:00",
+            "description": "",
+            "subtitle": "",
+            "published": "",
+            "tags": [],
+            "branch": "Three Mountains",
+            "location": {
+                "name": "Multnomah Arts Center",
+                "address": {
+                    "line1": "7688 SW Capitol Hwy",
+                    "city": "Portland",
+                    "state": "OR",
+                    "postal": "97219"
+                }
+            },
+            "type": "Martial Practice",
+            "pageType": "event",
+            "id": "/events/content/3m_practice.html",
+            "html": "/events/content/3m_practice.html"
+        },
+        {
+            "title": "Dragon's Mist Council",
+            "rrule": {
+                "freq": "monthly",
+                "count": 5,
+                "dtstart": "2022-09-15T19:00:00"
+            },
+            "description": "",
+            "subtitle": "",
+            "published": "",
+            "tags": [],
+            "branch": "Dragon's Mist",
+            "location": {
+                "name": "",
+                "address": {
+                    "line1": "",
+                    "city": "",
+                    "state": "",
+                    "postal": ""
+                }
+            },
+            "type": "Meeting",
+            "pageType": "event",
+            "id": "/events/content/dm_council.html",
+            "html": "/events/content/dm_council.html"
+        },
+        {
+            "title": "Dragon's Mist Weekly Practice",
+            "daysOfWeek": [
+                "2"
+            ],
+            "startTime": "19:00:00",
+            "endTime": "21:00:00",
+            "description": "",
+            "subtitle": "",
+            "published": "",
+            "tags": [],
+            "branch": "Dragon's Mist",
+            "location": {
+                "name": "William Walker Elementary School",
+                "address": {
+                    "line1": "",
+                    "city": "",
+                    "state": "",
+                    "postal": ""
+                }
+            },
+            "type": "Martial Practice",
+            "pageType": "event",
+            "id": "/events/content/dm_practice.html",
+            "html": "/events/content/dm_practice.html"
+        },
+        {
+            "title": "Stromgard Weekly Practice",
+            "daysOfWeek": [
+                "4"
+            ],
+            "startTime": "19:00:00",
+            "endTime": "22:00:00",
+            "description": "",
+            "subtitle": "",
+            "published": "",
+            "tags": [],
+            "branch": "Stromgard",
+            "location": {
+                "name": "Marshal Park",
+                "address": {
+                    "line1": "1015 E McLoughlin Blvd",
+                    "city": "Vancouver",
+                    "state": "WA",
+                    "postal": "98663"
+                }
+            },
+            "type": "Martial Practice",
+            "pageType": "event",
+            "id": "/events/content/stromgard_practice.html",
+            "html": "/events/content/stromgard_practice.html"
+        }
+    ],
+    "unknown": []
+}

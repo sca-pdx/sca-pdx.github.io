@@ -1,0 +1,36 @@
+{
+  "name": "sca-pdx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node index.js build",
+    "test": "node index.js test",
+    "up": "./node_modules/http-server/bin/http-server docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sca-pdx/sca-pdx.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sca-pdx/sca-pdx.github.io/issues"
+  },
+  "homepage": "https://github.com/sca-pdx/sca-pdx.github.io#readme",
+  "devDependencies": {
+    "commonmark": "^0.30.0",
+    "http-server": "^14.1.1",
+    "jsdom": "^20.0.0"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/rrule": "^5.11.3",
+    "fullcalendar": "^5.11.3"
+  }
+}

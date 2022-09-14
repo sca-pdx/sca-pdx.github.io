@@ -23,18 +23,19 @@ export default class FeaturetteLinks extends HTMLElement {
     }
 
     connectedCallback() {
+        console.log(this.featurettes);
         this.innerHTML = `
 
             ${this.featurettes.map((f, i) => `
              <hr class="featurette-divider">
-            <a href="${f.href}">
+            <a href="${f.html}">
                 <div class="row featurette">
                     <div class="col-md-7 ${i % 2 !== 0 ? 'order-md-2' : ''}">
                         <h2 class="featurette-heading">${f.title}</h2>
                         <p class="lead">${f.subtitle}</p>
                     </div>
                     <div class="col-md-5">
-                        ${f.img ? `<img src="${f.img}" />` : '<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>'}
+                        ${f.img ? `<img src="${f.img}" />` : '<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>'}
                     </div>
                 </div>
             </a>
